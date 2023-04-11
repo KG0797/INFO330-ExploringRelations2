@@ -4,6 +4,5 @@ SELECT tracks.Name AS TrackName, COUNT(*) AS Purchases
 FROM invoice_items
 JOIN invoices, tracks WHERE InvoiceDate LIKE '%2013%'
 GROUP BY tracks.TrackId
-ORDER BY Purchases DESC
-LIMIT 1;
+ORDER BY Purchases DESC;
 
