@@ -1,6 +1,6 @@
 -- Provide a query that includes the purchased track name AND artist name with each invoice line item.
 
-SELECT invoice_items.*, InvoiceLineId, tracks.Name AS TrackName, artists.Name AS ArtistName 
+SELECT InvoiceLineId, tracks.Name, artists.Name, invoice_items.*
 FROM invoice_items 
 JOIN tracks ON invoice_items.TrackId = tracks.TrackId
 JOIN albums ON tracks.AlbumId = albums.AlbumId
